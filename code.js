@@ -10,6 +10,7 @@
 
 const ADDON_NAME = PropertiesService.getScriptProperties().getProperty("ADDON_NAME");
 
+const _ = LodashGS.load();
 /**
  * Creates a menu entry in the Google Docs UI when the document is opened.
  *
@@ -130,7 +131,7 @@ function nannenkanji(grade) {
     }
   }
 
-  return bookmarks;
+  return _.reverse(bookmarks);
 }
 
 /**
